@@ -1,13 +1,15 @@
-<MyWidget>:
-<Button>:
-    color: .8,.9,0,1
-	font_size: 32
-	size_hint: .4, .3
-
-<FloatLayout>:
-	Button:
-    	text: 'Hello'
-		pos_hint: {'x': 0, 'top': 1}
-	Button:
-		text: 'World!'
-		pos_hint: {'right': 1, 'y': 0}
+<MyRoot>:
+<RelativeLayout>:
+    Spinner:
+        size_hint: None, None
+        size: 120, 44
+        pos_hint: {'center': (.5, .5)}
+        text: 'Home'
+        values: 'Home', 'Work', 'Other', 'Custom'
+        on_value: 
+        print: "The spinner {} has text {}".format(self, self.values)
+#    Button:
+#	    text: 'Start'
+#		size_hint_y: None
+#		size: 120, 44
+#		on_release: root.select('item1') 
